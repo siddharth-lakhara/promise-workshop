@@ -1,8 +1,10 @@
 const soln = require('./solution');
 
-test('Returns fulfilled: ', ()=>{
+test('Returns fulfilled: ', (done)=>{
 	let callBack = (data)=>{
-		expect(data).toBe('FULFILLED');
+		// console.log(data);
+		expect(data).toBe('FULFILLED!');
+		done();
 	};
 	soln(callBack);
 });
